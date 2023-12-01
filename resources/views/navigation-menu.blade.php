@@ -25,12 +25,16 @@
                     <x-nav-link href="{{ route('informe') }}" :active="request()->routeIs('informe')" class="text-white hover:text-yellow-500 font-bold">
                         {{ __('Gestinar informe') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ url('crearconvocatoria') }}" :active="request()->routeIs('convocatoria')" class="text-white hover:text-yellow-500 font-bold">
+                        {{ __('Crear Convocatoria') }}
+                    </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('informe') }}" :active="request()->routeIs('Supervisor')" class="text-white hover:text-yellow-500 font-bold">
                         {{ __('Supervisor') }}
                     </x-nav-link>
                 </div>
+                <label for="table-search" class="sr-only">Search</label>
 
                 </div>
             </div>

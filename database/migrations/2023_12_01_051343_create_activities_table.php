@@ -11,16 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('convocatorias', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->id();
-
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->date('fechainicio');
-            $table->date('fechafin');
-            $table->integer('vacante');
-            $table->string('jornada');
-            
+            $table->string('name');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('convocatorias');
+        Schema::dropIfExists('activities');
     }
 };

@@ -13,8 +13,6 @@
 
     </x-slot>
 
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight mr-5">
-        {{ __('') }}
-    </h2>
+    
 
 </x-app-layout>
